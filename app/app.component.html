@@ -1,0 +1,22 @@
+<div>
+  <h1>Prime Numbers Test</h1>
+    <!-- <a href="#" class="navbar-brand">{{ title }}</a> -->
+  
+    <form  [formGroup]="maryleBonePrimeNumberForm" (ngSubmit)="primeNumber()">
+   
+      <p>
+        <label for="primeNumber">Please enter a number below</label>
+        <input min="1" max="100" type="number" id="primeNumber" name="primeNumber" formControlName="primeNumber" >
+      </p>
+         
+      <p>
+        <button type="submit">Get result</button>
+      </p>
+     
+    </form>
+  <p class="result">The result for {{maryleBonePrimeNumberForm.value.primeNumber}} is</p>
+    <h4 class="primeOutput" *ngIf="output">{{output}}</h4>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
